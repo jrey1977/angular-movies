@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+html,body{
+    height: 100%;
+}
+body {
+    background-color: #14161E;
+    background-size: auto;
+    background-position: center;
+}
+
+nav{
+    z-index: 2;
+}
+
+h1,h2,h3,h4,h5 {
+    font-weight: 200;
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+hr{
+    color: white;
+}
+
+.navbar{
+    border-bottom: 1px solid #3e3d3d;
+    background: #1d1d1d;
+}
+
+a.navbar-brand{
+    cursor: pointer;
+}
+
+.navbar-brand {
+    font-weight: 200;
+}
+
+.block {
+    display:block;
+}
+
+.container-fluid{
+    max-width: 1140px;
+}

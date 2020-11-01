@@ -1,0 +1,9 @@
+<h2 class="mb-4">Novedades</h2>
+
+<div *ngIf="movies.length > 0" class="animate__animated animate__fadeIn">
+    <app-slideshow [movies]="movies" ></app-slideshow>
+</div>
+
+<h2 class="mt-5">Cartelera</h2>
+
+<app-peliculas-poster-grid *ngIf="movies.length > 0" [movies]="movies"></app-peliculas-poster-grid>

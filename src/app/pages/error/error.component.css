@@ -1,0 +1,27 @@
+/*! CSS Used from: Embedded */
+*{margin:0;padding:0;}
+*,*:before,*:after{box-sizing:inherit;}
+section{display:block;}
+h1{margin-bottom:25px;font-weight:normal;line-height:170%;}
+h1{line-height:normal;}
+h1{font-size:60px;}
+p{margin-bottom:25px;line-height:170%;}
+.vertical-center{position:relative;display:flex;align-items:center;min-height:100%;}
+#content{display:flex;flex-direction:column;position:relative;clear:both;min-height:calc(100vh - 418px);transition:padding 0.6s ease-in-out;z-index:0;}
+#content:after{content:'';display:block;clear:both;}
+#content:before{content:'';display:block;position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.75);z-index:400;opacity:0;visibility:hidden;transition:all 0.5s;}
+.block{position:relative;padding:50px 0;transition:background 0.3s ease-in-out;}
+.block.flex-1{flex:1;}
+.block.vertical-center{min-height:calc(100vh - 418px);}
+.box-noresults{width:525px;max-width:100%;margin:0 auto;text-align:center;text-transform:uppercase;font-size:14px;font-weight:400;}
+.box-noresults .box-icon{margin-bottom:20px;}
+.box-noresults .text{position:relative;}
+.box-noresults h1{margin-bottom:10px;font-size:17px;font-weight:700;}
+.box-noresults p{margin-bottom:5px;}
+.box-noresults p:last-child{margin-bottom:0;}
+@media (max-width: 1024px){
+#content{overflow:hidden;}
+}
+@media (max-width: 700px){
+.block{padding-top:23px;padding-bottom:23px;}
+}

@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-dark py-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/home">
+          <img class="mr-2 mb-1" src="/assets/camara.png" alt="">  
+          Mi filmoteca
+      </a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+        </ul>
+        <div class="d-flex">
+          <input 
+            #textoBusqueda 
+            (keyup.enter)="buscarPelicula(textoBusqueda.value)"
+            class="form-control mr-2" 
+            type="search" 
+            placeholder="Buscar película" 
+            aria-label="Buscar">
+          <button class="btn btn-outline-info" type="button" (click)="buscarPelicula(textoBusqueda.value)">Buscar</button>
+        </div>
+      </div>
+    </div>
+  </nav>

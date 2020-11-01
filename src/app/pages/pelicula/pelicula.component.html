@@ -1,0 +1,43 @@
+<div id="fondoPelicula"></div>
+<div 
+    class="row container mx-auto animate__animated animate__fadeIn" 
+    *ngIf="movie">
+    <div class="position-relative col-12 col-md-4 z-index">
+            <!--Imagen-->
+            <img [src]="movie.poster_path | poster" alt="" class="img-fluid" [alt]="movie.title"> 
+    </div>
+    <div class="position-relative col-12 col-md-8 pl-5 z-index text-white">
+        <!--Descripción-->
+        <div class="col-12 mb-5">
+            <h1 class="font-weight-bold">{{movie.title}} ({{ movie.release_date | date:'yyy'}})</h1>
+            <div> {{ movie.release_date | date:'dd MMM yyy'}}  |  <small *ngFor="let genre of movie.genres">{{genre.name}} </small> | {{movie.runtime | hours}}</div>
+        </div>
+        
+        <div class="row">
+            <!--Rating stars-->
+            <div>
+                <small class="mr-4">Puntuación:</small><h2 class="m,l-2">{{movie.vote_average}}</h2>
+                <star-rating value="{{movie.vote_average}}" 
+                                totalstars="10" 
+                                checkedcolor="{{color}}" 
+                                uncheckedcolor="grey" 
+                                size="20px" 
+                                readonly="false">
+                </star-rating>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <p>{{movie.overview}}</p>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+                <button class="btn btn-outline-info" (click)="regresar()">Regresar</button>
+            </div>
+        </div>
+    </div>
+    <div class="position-relative col-12 z-index text-white mt-5" *ngIf="reparto.length > 0">
+        <h3>Reparto:</h3>
+        <hr>
+        <app-slideshow-actores class="animate__animated animate__fadeIn" [actores]="reparto"></app-slideshow-actores>
+    </div>
+</div>
